@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>DynamicAtlasCreatorDemo</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] RectanglePacking-master-src</name>
+			<type>2</type>
+			<location>/Users/juwalbose/Work/Code Repo/AS3/RectanglePacking-master/src</location>
+		</link>
+		<link>
+			<name>[source path] robertpenner-as3-signals-fd03bf8-src</name>
+			<type>2</type>
+			<location>/Users/juwalbose/Work/Code Repo/AS3/robertpenner-as3-signals-fd03bf8/src</location>
+		</link>
+		<link>
+			<name>[source path] starling-src</name>
+			<type>2</type>
+			<location>/Users/juwalbose/Work/Code Repo/AS3/Starling-Framework-1.4 sept 25/starling/src</location>
+		</link>
+	</linkedResources>
+</projectDescription>

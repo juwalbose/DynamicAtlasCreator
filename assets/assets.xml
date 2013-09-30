@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:4f951b26cb2599495b888ad09d99b4e2$ -->
+<TextureAtlas imagePath="assets.png">
+    <SubTexture name="tiles0001" x="485" y="1" width="1" height="1" frameX="0" frameY="0" frameWidth="120" frameHeight="120"/>
+    <SubTexture name="tiles0002" x="1" y="485" width="120" height="120"/>
+    <SubTexture name="tiles0003" x="364" y="364" width="120" height="120"/>
+    <SubTexture name="tiles0004" x="243" y="364" width="120" height="120"/>
+    <SubTexture name="tiles0005" x="122" y="364" width="120" height="120"/>
+    <SubTexture name="tiles0006" x="1" y="364" width="120" height="120"/>
+    <SubTexture name="tiles0007" x="364" y="243" width="120" height="120"/>
+    <SubTexture name="tiles0008" x="243" y="243" width="120" height="120"/>
+    <SubTexture name="tiles0009" x="122" y="243" width="120" height="120"/>
+    <SubTexture name="tiles0010" x="1" y="243" width="120" height="120"/>
+    <SubTexture name="tiles0011" x="364" y="122" width="120" height="120"/>
+    <SubTexture name="tiles0012" x="243" y="122" width="120" height="120"/>
+    <SubTexture name="tiles0013" x="122" y="122" width="120" height="120"/>
+    <SubTexture name="tiles0014" x="1" y="122" width="120" height="120"/>
+    <SubTexture name="tiles0015" x="364" y="1" width="120" height="120"/>
+    <SubTexture name="tiles0016" x="243" y="1" width="120" height="120"/>
+    <SubTexture name="tiles0017" x="122" y="1" width="120" height="120"/>
+    <SubTexture name="tiles0018" x="403" y="485" width="38" height="120" frameX="0" frameY="0" frameWidth="120" frameHeight="120"/>
+    <SubTexture name="tiles0019" x="243" y="485" width="120" height="40" frameX="0" frameY="-80" frameWidth="120" frameHeight="120"/>
+    <SubTexture name="tiles0020" x="364" y="485" width="38" height="120" frameX="-82" frameY="0" frameWidth="120" frameHeight="120"/>
+    <SubTexture name="tiles0021" x="122" y="485" width="120" height="40" frameX="0" frameY="0" frameWidth="120" frameHeight="120"/>
+    <SubTexture name="tiles0022" x="1" y="1" width="120" height="120"/>
+</TextureAtlas>
