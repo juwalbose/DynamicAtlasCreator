@@ -30,8 +30,8 @@ scale > the ratio to scale down to. eg, for 1024 x 768 this can be 0.5
 assets > default Starling AssetManager class which will be populated with new textures
 
 The AIR version at https://github.com/juwalbose/DynamicAtlasCeatorAirDemo saves the created DynamicAtlas to 
-ApplicationStorageDirectory for reuse after the first run. Web version ignores the texture 'frames' feature as we are
-adding textures to the asset manager. AIR version supports texture frames as we are dealing with a tangible texture
-atlas & not independent textures. Can be altered to support 'frames' if needed which will optimise the atlas.
+ApplicationStorageDirectory for reuse after the first run. Web version ignores the texture 'frame' feature as we are
+adding textures to the asset manager. AIR version supports texture frame as we are dealing with a tangible texture
+atlas & not independent textures. Can be altered to support 'frame' if needed which will optimise the atlas.
 
 Thank you Ville Koskela & Daniel Sperl for all the support.
