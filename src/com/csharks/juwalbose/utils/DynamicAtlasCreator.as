@@ -35,6 +35,7 @@
 package com.csharks.juwalbose.utils
 {
 	import flash.display.BitmapData;
+	import flash.geom.ColorTransform;
 	import flash.geom.Matrix;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
@@ -139,7 +140,7 @@ package com.csharks.juwalbose.utils
 				bData.copyPixels(sourceBitmapData,clipping,pt);
 				
 				//add to dictionary  
-				gameAtlas[name] =scaleBitmapData(bData);  
+				gameAtlas[name] =resampleBitmapData(bData);//scaleBitmapData(bData);  
 				
 				bData.dispose();
 				bData=null;
@@ -282,18 +283,42 @@ package com.csharks.juwalbose.utils
 			}
 			return tmp;
 		}
-		private static function scaleBitmapData(ARG_object:BitmapData):BitmapData {
+		private static function scaleBitmapData(ARG_object:BitmapData, ratio:Number):BitmapData {
 			// create a BitmapData object the size of the crop
-			//var bmpd:BitmapData = new BitmapData(ARG_object.width * ARG_scaleX, ARG_object.height * ARG_scaleY,true,0x000000);
-			var bmpd:BitmapData = new BitmapData(ARG_object.width * scaleRatio, ARG_object.height * scaleRatio,true,0x000000);
+			var bmpd:BitmapData = new BitmapData(Math.round(ARG_object.width * ratio), 
+				Math.round(ARG_object.height * ratio),true,0x000000);
 			// create the matrix that will perform the scaling
 			var scaleMatrix:Matrix = new Matrix();
-			scaleMatrix.scale(scaleRatio, scaleRatio);
+			scaleMatrix.scale(ratio, ratio);
+			var colorTransform:ColorTransform = new ColorTransform();
 			// draw the object to the BitmapData, applying the matrix to scale
-			bmpd.draw( ARG_object, scaleMatrix ,null,null,null,true);
+			bmpd.draw( ARG_object, scaleMatrix ,colorTransform,null,null,true);
 			ARG_object.dispose();
 			ARG_object=null;
 			return bmpd;
+		}
+		
+		private static function resampleBitmapData (bmp:BitmapData):BitmapData {
+			if (scaleRatio >= 1) {
+				return (scaleBitmapData(bmp,scaleRatio));
+			}
+			else {
+				var bmpData:BitmapData 	= bmp.clone();
+				var appliedRatio:Number = 1;
+				
+				do {
+					if (scaleRatio < 0.5 * appliedRatio) {
+						bmpData = scaleBitmapData(bmpData, 0.5);
+						appliedRatio = 0.5 * appliedRatio;
+					}
+					else {
+						bmpData = scaleBitmapData(bmpData, scaleRatio / appliedRatio);
+						appliedRatio = scaleRatio;
+					}
+				} while (appliedRatio != scaleRatio);
+				
+				return (bmpData);
+			}
 		}
 	}
 }
